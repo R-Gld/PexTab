@@ -58,10 +58,6 @@
             <id>spigotmc-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
         </repository>
-        <repository>
-            <id>pex-repo</id>
-            <url>http://pex-repo.aoeu.xyz</url>
-        </repository>
     </repositories>
 
     <dependencies>

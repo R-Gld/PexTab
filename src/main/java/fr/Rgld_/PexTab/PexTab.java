@@ -5,6 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 import ru.tehkode.permissions.PermissionEntity;
 import ru.tehkode.permissions.PermissionUser;
@@ -22,6 +23,13 @@ public final class PexTab extends JavaPlugin implements Listener {
         Bukkit.getPluginManager().registerEvents(this, this);
     }
 
+
+    @EventHandler
+    public void onJoin(PlayerJoinEvent e){
+        Player p = e.getPlayer();
+        PermissionUser user = PermissionsEx.getUser(p);
+        p.setPlayerListName(ChatColor.translateAlternateColorCodes('&', user.getPrefix() + p.getName() + user.getSuffix()));
+    }
 
     @EventHandler
     public void onPermChange(PermissionEntityEvent e){
