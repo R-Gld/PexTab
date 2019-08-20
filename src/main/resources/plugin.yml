@@ -1,0 +1,6 @@
+name: ${project.name}
+version: ${project.version}
+main: fr.Rgld_.PexTab.PexTab
+api-version: 1.13
+depend: [PermissionsEx]
+authors: [Rgld_]
